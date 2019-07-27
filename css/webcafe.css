@@ -18,7 +18,38 @@ a{
   color: inherit;
   text-decoration: none;
 }
-a:link{
+
+/* 공통 */
+
+/* 모바일 */
+@media screen and (min-width:320px) and (max-width: 999px){
+  /* 모바일 헤더 */
+  .header{
+    background:#38302e;
+    color:#fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .logo, .member, .search-form{
+    width:100%;
+  }
+  /* 모바일 멤버링크 */
+  .member{
+    background: #988574;
+    order: -1;
+  }
+}
+/* 데스크탑 */
+@media screen and (min-width: 1000px){
+
+}
+
+
+
+
+
+/* a:link{
   color: green;
 }
 a:visited{
@@ -26,4 +57,4 @@ a:visited{
 }
 a:hover, a:focus{
   color: red;
-}
+} */
