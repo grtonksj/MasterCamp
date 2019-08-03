@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
-<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+<!-- 
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+-->
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
@@ -12,27 +14,27 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <h1 class="logo"><a href="#"><img src="/images/rwd-logo.png" alt="Web Cafe"></a></h1>
-      <ul class="menber">
+      <h1 class="logo"><a href="#"><img src="images/rwd-logo.png" alt="Web Cafe"></a></h1>
+      <ul class="member">
         <li><a href="#">로그인</a></li>
-        <li><a href="#">회원가입</a></li>
-        <li><a href="#">커뮤니티</a></li>
+        <li><span class = "bar" aria-hidden="true">|</span><a href="#">회원가입</a></li>
+        <li><span class = "bar" aria-hidden="true">|</span><a href="#">커뮤니티</a></li>
       </ul>
-      <form action="https://formspree.io/supksj@gmail.com" method="POST" class="search-form"></form>
+      <form action="https://formspree.io/supksj@gmail.com" method="POST" class="search-form">
         <fieldset>
-          <legend>검색폼</legend>
-          <label for="search">검색어</label>
-          <input  type="search" id="search" name="keyword" required placeholder="검색어를 입력하세요.">
+          <legend >검색 폼</legend>
+          <label for="search" class="a11y-hidden">검색어</label>
+          <input type="search" id="search" name="keyword" required placeholder="검색어를 입력하세요">
           <button class="btn-search" type="submit">검색</button>
         </fieldset>
+      </form>
     </header>
-    <nav class="navigation">네비</nav>
+    <nav class="navigation">내비게이션</nav>
     <main class="main">메인</main>
-    <ariticle class="slogan">슬로건</ariticle>
+    <article class="slogan">슬로건</article>
     <div class="footer-bg">
       <footer class="footer">푸터</footer>
     </div>
   </div>
-
 </body>
 </html>
