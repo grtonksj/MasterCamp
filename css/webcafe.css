@@ -2,7 +2,7 @@
 @import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 @import url('./normalize.css');
 @import url('./reset.css');
-
+@import url('./fonts.css');
 /* 기본 스타일 */
 *, *::before, *::after{
   box-sizing: border-box;
@@ -154,6 +154,95 @@ legend, .a11y-hidden{
     height: 100%;
   }
 }
+/* 모바일 네비게이션 */
+.navigation{
+  background: blue;
+
+}
+/* 모바일 메뉴 제어 버튼 */
+.btn-menubar{
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  border:0;
+  padding: 0;
+  position: absolute;
+  top:6.5rem;
+  right:20px;
+}
+.is-act .btn-menubar{
+  overflow: hidden;
+}
+.menubar{
+  background: white;
+  width:100%;
+  height: 26%;
+  position: absolute;
+  left:0;
+  transition: transform 0.3s;
+  /*
+  transition-property: transform, background,top ;
+  transition-duration: 500ms, 1000ms,500ms;
+  transition-delay: 0s, 500ms,0ms;
+  transition-timing-function: ease-in-out; */
+}
+
+.menubar-top{
+  top:0;
+}
+.is-act .menubar-top{
+  transform: translateY(-50%) rotate(45deg);
+  top:50%;
+
+}
+.menubar-middle{
+  top:50%;
+  transform: translateY(-50%);
+}
+.is-act .menubar-middle{
+  transform: translate(-100%,-50%);  
+}
+.menubar-bottom{
+  top:100%;
+  transform: translateY(-100%);
+}
+.is-act .menubar-bottom{
+  transform: translateY(-50%) rotate(-45deg);
+  top:50%;
+}
+/* 모바일 메인메뉴 */
+.menu{
+  background: rgba(0,0,0,0.70);
+  color:#fff;
+  position: fixed;
+  widows: 70vw;
+  height: 100vh;
+  top:0;
+  left:0;
+  transform: translateX(-100%);
+  transition: all 0.8s;
+  padding: 1.5em;
+}
+.is-act .menu{
+  transform: translateX(0);
+}
+.menu-list{
+  /* background:pink; */
+}
+.menu-item{
+  /* background:blue; */
+  margin: 1em 0;
+  display: block;/*인라인 상자는 마진 안먹음*/
+  cursor: pointer;
+}
+.sub-menu{
+  display: none;
+  margin-left: 1.5em;
+  
+}
+.menu-act .sub-menu{
+  display: block;
+}
 
 /* 데스크탑 스타일 */
 @media screen and (min-width: 1000px){
@@ -229,9 +318,13 @@ legend, .a11y-hidden{
      /*width굵기, style모양, color색상, */
     
     }
+.btn-menubar{
+  display: none;
+}
+
   .menu{
     margin-top:20px;
-    color: white;
+    color:#fff;
 
   }
   .clearfix::after{
@@ -249,6 +342,7 @@ legend, .a11y-hidden{
   }
   .menu-item{
     font-size: 1.8em;
+    font-weight: 700;/*사시미로 과일 깎지말아야, 어느 클래스에 값을 줘야하는지 고려해야 지금은 대가리만 굵어짐*/
     text-shadow: 0 1px 0 #000,1px 0 0 #000,0 -1px 0 #000,-1px 0 0 #000,;
   }
   .sub-menu{
